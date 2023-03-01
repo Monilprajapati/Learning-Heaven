@@ -1,7 +1,7 @@
 # Learning Heaven
 It is an educational technology website to enhance student learning and engagement.
 
-# Website is live here : 
+# Website is live here: 
 
 ## Dev Guide
 
