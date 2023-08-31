@@ -1,0 +1,9 @@
+section.testimonials {
+    width: 100%;
+    padding: 100px 8%;
+}
+
+.testimonials .section-header {
+    width: 70%;
+    max-width: 700px;
+}

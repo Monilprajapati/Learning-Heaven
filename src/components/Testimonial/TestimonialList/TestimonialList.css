@@ -1,0 +1,6 @@
+.testimonials-slider .testimonials-item{
+	position: relative;
+	padding: 20px 25px;
+	background-color: var(--primary-light-clr);
+	margin: 5px;
+}

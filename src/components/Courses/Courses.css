@@ -1,0 +1,17 @@
+section.courses {
+	width: 100%;
+	padding: 100px 8% 20px;
+}
+
+.section-header {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+
+.section-header .courses-btn {
+	position: absolute;
+	right: 0;
+	bottom: 40px;
+	padding: 10px 26px;
+}

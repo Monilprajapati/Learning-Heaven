@@ -1,0 +1,59 @@
+.sidebar-container {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid lightgray;
+    background: whitesmoke;
+}
+
+.title {
+    font-size: 26px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 500;
+    padding-top: 30px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+    background: var(--primary-clr);
+}
+
+.links_sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.homeLabel, .exploreLabel, .watchLater, .likedVideos{
+    display: flex;
+    background: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+    align-items: center;
+    border: 2px solid whitesmoke;
+    padding: 8px 10px;
+    gap: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.exploreLabel.active, .watchLater.active, .likedVideos.active{
+    border-color: black;
+}
+
+
+.homeIcon, .heartIcon, .clockIcon, .exploreIcon{
+    color: var(--primary-clr);
+}
+
+.links_sidebar label{
+    padding-left: 4px;
+    font-weight: semibold;
+}
+
+.homeLabel:hover, .watchLater:hover, .likedVideos:hover, .exploreLabel:hover{
+    border-color: var(--primary-clr);
+}

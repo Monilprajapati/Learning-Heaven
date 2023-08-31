@@ -1,0 +1,36 @@
+.explore-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.explore-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.explore-content {
+    width: 100%;
+    padding-top: 2.2rem;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.explore-content h2 {
+    margin-left: 13px;
+    margin-bottom: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+
+.course_list{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 20px;
+    align-items: center;
+    overflow-y: scroll;
+}

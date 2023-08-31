@@ -1,0 +1,9 @@
+.course-contents {
+	display: flex;
+	align-items: center;
+	/* justify-content: flex-start; */
+	flex-wrap: wrap;
+	width: 100%;
+	row-gap: 10px;
+	column-gap: 20px;
+}

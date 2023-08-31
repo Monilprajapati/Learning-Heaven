@@ -1,0 +1,21 @@
+section.instructor {
+    width: 100%;
+    padding: 100px 8% 20px;
+}
+
+.instructor .instructor-container {
+    width: 100%;
+    padding: 70px 8%;
+    background-color: var(--primary-light-clr);
+    border-radius: 0px 100px 0px 100px;
+}
+
+.instructor-container h2 {
+    font-size: 24px;
+    color: var(--dark-heading-clr);
+}
+
+.instructor-container p {
+    margin: 20px 0px 35px;
+    color: var(--dark-text-clr);
+}

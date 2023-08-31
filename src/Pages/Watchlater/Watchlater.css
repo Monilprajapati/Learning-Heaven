@@ -1,0 +1,17 @@
+.watchlater-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.watchlater{
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.watchlater-content{
+    width: 100%;
+    padding-top: 2.2rem;
+    padding-left: 2rem;
+    
+}

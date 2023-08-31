@@ -1,0 +1,11 @@
+section.categories{
+	width: 100%;
+	padding: 100px 8% 20px;
+}
+
+.section-header{
+	position: relative;
+	display: flex;
+    flex-direction: column;
+	justify-content: space-between;
+}	

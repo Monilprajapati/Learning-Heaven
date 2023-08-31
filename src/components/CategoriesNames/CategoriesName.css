@@ -1,0 +1,20 @@
+.categories_display{
+    display: flex;
+    
+}
+
+.categories_display .category{
+    margin : 0px 10px;
+    padding: 10px 20px;
+    background: #F5F5F5;
+    border: 1px solid black ;
+    border-radius: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.categories_display .category:hover{
+    background: #f5f5f500;
+}

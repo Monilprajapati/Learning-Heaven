@@ -1,0 +1,69 @@
+section.partners {
+	width: 100%;
+	padding: 30px 8%;
+	background-color: var(--light-heading-clr);
+}
+
+.partners h3 {
+	margin-top: 10px;
+	margin-bottom: 30px;
+	color: var(--dark-heading-clr);
+	font-size: 22px;
+}
+
+.partners-slider {
+	margin-bottom: 20px;
+}
+
+
+.partners .partners-slider .brand-item {
+	text-align: center;
+	background-color: var(--primary-light-clr);
+	padding: 5px;	
+	border-right: 10px solid var(--light-heading-clr);
+	margin-bottom: 20px;
+
+}
+
+.partners .partners-slider .brand-item img {
+	width: 120px;
+	height: 50px;
+	display: inline-block;
+	margin: 10px;
+
+}
+
+/* .owl-carousel .owl-nav{
+	position: absolute;
+	right: 0;
+	top: -80px;
+} */
+/* .owl-carousel .owl-nav button{
+	border-radius: 5px !important;
+} */
+/* .owl-carousel .owl-nav .owl-prev i,
+.owl-carousel .owl-nav .owl-next i{
+	padding: 8px 14px !important;
+	border-radius: 5px;
+	font-size: 16px !important;
+	background-color: var(--primary-clr) !important;
+	color: var(--light-heading-clr);
+	border: 1px solid transparent;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.owl-carousel .owl-nav .owl-prev i:hover,
+.owl-carousel .owl-nav .owl-next i:hover{
+	background-color: var(--light-heading-clr) !important;
+	color: var(--primary-clr);
+	border: 1px solid var(--primary-clr);
+} */
+/* .owl-carousel .owl-dots{
+	margin-top: 20px;
+}
+.owl-carousel .owl-dots .owl-dot span{
+	padding: 4px !important;
+}
+.owl-carousel .owl-dots .owl-dot.active span{
+	background-color: var(--primary-clr) !important;
+} */
