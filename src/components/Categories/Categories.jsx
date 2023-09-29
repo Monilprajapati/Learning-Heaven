@@ -6,7 +6,6 @@ const Categories = () => {
   return (
     <div>
       <section class="categories" id="categories">
-
         <header class="section-header">
           <h1>Brouse Courses By Categories</h1>
           <p>
