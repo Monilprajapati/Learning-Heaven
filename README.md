@@ -1,22 +1,57 @@
-# Learning Heaven
+# Learing Heaven
+
 It is an educational technology website to enhance student learning and engagement.
 
-# Website is live here: 
+## Table of Contents
 
-## Dev Guide
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+
+<a id="getting-started"></a>
+## Getting Started
+
+Welcome to **Learning Heaven**. This platform is designed to enhance student learning and engagement by providing a range of educational resources and interactive tools. Whether you're a student, teacher, or educational enthusiast.
+
+To get started, follow these simple steps:
+
+<a id="prerequisites"></a>
+## Prerequisites
+
+Before you can run the Chat App with AI, make sure you have the following prerequisites installed on your system:
+
+1. **Node.js and npm**: Node.js is a JavaScript runtime environment, and npm (Node Package Manager) is the package manager for Node.js. They are essential for running JavaScript applications like React and installing packages, including React and Tailwind CSS.
+
+   - **Node.js**: You can download and install Node.js from the official website: [https://nodejs.org/](https://nodejs.org/). Make sure to install a version that is compatible with your project's requirements.
+
+2. **Visual Studio Code (VS Code)** (Optional): While not strictly required, many developers prefer to use VS Code for its robust features, extensions, and integration with JavaScript development.
+
+   - **Visual Studio Code**: You can download and install VS Code from the official website: [https://code.visualstudio.com/](https://code.visualstudio.com/).
+
+3. **React**: Since your project involves building a chat app with AI, you'll likely be using React as the front-end library. React allows you to build user interfaces efficiently.
+
+   - **React**: You can create a new React application using the `create-react-app` tool, which comes with many essential dependencies preconfigured. To install `create-react-app`, you can use npm:
+
+     ```bash
+     npm install -g create-react-app
+     ```
+     
+If you're new to any of these tools or technologies, don't worry; we've provided installation instructions to help you get started.
+
+<a id="installation"></a>
+## Installation
+
+Step-by-step instructions on how to install and set up your project. Include any configuration steps if necessary.
 
 ```bash
-git clone "https://github.com/Monilprajapati/Learning-Heaven.git"
+# Clone the repository
+git clone https://github.com/Monilprajapati/Learning-Heaven.git
+
+# Change directory to your project folder
 cd Learning-Heaven
-npm i
-npm start
-```
 
-## Contributing
+# Install dependencies
+npm install
 
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## Feel free to connect with Me
+# Start local host
+npm run dev
