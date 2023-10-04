@@ -3,7 +3,7 @@ import "./Explore.css";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import CategoriesName from "../../components/CategoriesNames/CategoriesName";
 import { useCourses } from "../../context/VideoProvider";
-import CourseCard from "../Coursecard"
+import ExploreCard from "./ExploreCard/ExploreCard";
 const Explore = () => {
   const { courseData } = useCourses();
   return (
@@ -16,7 +16,7 @@ const Explore = () => {
           <CategoriesName />
           <div className="course_list">
             {courseData.map((course, index) => (
-              <CourseCard
+              <ExploreCard
                 key={index}
                 image={course.image}
                 category={course.category}
