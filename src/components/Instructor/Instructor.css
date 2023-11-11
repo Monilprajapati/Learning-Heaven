@@ -17,5 +17,6 @@ section.instructor {
 
 .instructor-container p {
     margin: 20px 0px 35px;
+    line-height: 23px;
     color: var(--dark-text-clr);
 }

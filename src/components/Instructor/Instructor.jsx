@@ -5,12 +5,9 @@ const Instructor = () => {
   return (
     <section class="instructor">
       <div class="instructor-container">
-        <h2>Become an instructor with Bright Future Platform</h2>
+        <h2>Become an Instructor: Share Your Expertise with the World</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          Are you passionate about your field and eager to share your knowledge? Join our community of educators and become an instructor! At Learning Heaven, we invite you to become an instructor and contribute to the ever-expanding world of online education. Benefit from the flexibility to create courses on your terms, make a meaningful impact, and earn income based on your success.
         </p>
         <button class="teacher-btn btn">Your Details</button>
       </div>

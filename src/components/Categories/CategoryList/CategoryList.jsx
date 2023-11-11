@@ -7,26 +7,25 @@ const CategoryList = () => {
     {
       icon: "fa-solid fa-code",
       title: "Development",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      description: "Software development refers to a set of computer science activities dedicated to the process of creating, designing, deploying and supporting software.",
     },
     {
       icon: "fa-solid fa-bullhorn",
       title: "Marketing",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Marketing refers to activities a company undertakes to promote the buying or selling of a product or service.",
     },
     {
       icon: "fa-solid fa-palette",
       title: "Designing",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Graphic design is a craft where professionals create visual content to communicate messages.",
     },
     {
       icon: "fa-solid fa-camera",
       title: "Photography",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "The word Photography literally means 'drawing with light', which derives from the Greek photo, meaning light and graph, meaning to draw.",
     },
   ];
 

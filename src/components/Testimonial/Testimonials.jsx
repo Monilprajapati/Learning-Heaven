@@ -9,8 +9,7 @@ const Testimonials = () => {
         <header class="section-header">
           <h1>Testimonials</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+           Discover the impact of our courses through the eyes of our learners. Join the chorus of satisfied learners and share your success story with us.
           </p>
         </header>
         <TestimonialList />

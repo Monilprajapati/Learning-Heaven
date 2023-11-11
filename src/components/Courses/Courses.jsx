@@ -17,8 +17,7 @@ const Courses = () => {
           <div class="header-text">
             <h1>Choose Your Favourite Course</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Courses Section: Unlock Your Potential. Embark on a journey of self-discovery and inspiration. where knowledge meets innovation across various domains. Choose your path and elevate your skills with our carefully curated courses. 
             </p>
           </div>
           <button class="courses-btn btn" onClick={navigateToExplore}>View All</button>

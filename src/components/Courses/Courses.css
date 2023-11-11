@@ -10,6 +10,7 @@ section.courses {
 }
 
 .section-header .courses-btn {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	position: absolute;
 	right: 0;
 	bottom: 40px;

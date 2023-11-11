@@ -1,6 +1,10 @@
 .course-card {
     /* flex-basis: calc(calc(100% / 3) - 0.5%); */
     width: 410px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: 1px solid #eee;
     padding: 10px;
     border-radius: 5px;

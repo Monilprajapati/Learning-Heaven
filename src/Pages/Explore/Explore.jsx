@@ -1,7 +1,7 @@
 import React from "react";
 import "./Explore.css";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import CategoriesName from "../../components/CategoriesNames/CategoriesName";
+import CategoriesName from "./components/CategoriesNames/CategoriesName";
 import { useCourses } from "../../context/VideoProvider";
 import ExploreCard from "./ExploreCard/ExploreCard";
 const Explore = () => {
@@ -11,14 +11,13 @@ const Explore = () => {
       <div className="explore-container">
         <Sidebar />
         <div className="explore-content">
-          {/* <h2>Your Courses</h2> */}
           <h2>Your Courses</h2>
           <CategoriesName />
           <div className="course_list">
             {courseData.map((course, index) => (
               <ExploreCard
                 key={index}
-                image={course.image}
+                img={course.image}
                 category={course.category}
                 subjectImage={course.subjectImage}
                 title={course.title}
@@ -26,6 +25,8 @@ const Explore = () => {
                 studentCount={course.studentCount}
                 ratings={course.ratings}
                 price={course.price}
+                liked={course.liked}
+                watchLater={course.watchLater}
               />
             ))}
           </div>

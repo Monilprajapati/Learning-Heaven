@@ -9,8 +9,7 @@ const Categories = () => {
         <header class="section-header">
           <h1>Brouse Courses By Categories</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Welcome to our Courses Categories section, where learning meets passion! Explore a diverse range of skill-building opportunities designed to empower you in the digital age.
           </p>
         </header>
 

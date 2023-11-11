@@ -1,29 +1,44 @@
 import React from "react";
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 const courses = createContext();
 
 const VideoProvider = ({ children }) => {
+
+  // const [likeVideos, setLikedVideos] = useState([]);
+  // const [watchLaterVideos, setWatchLaterVideos] = useState([]);
+
+  // const likedVideosFunction = (prev) => {
+  //   setLikedVideos({ ...prev, likeVideos });
+  // }
+
+  // const watchLaterVideosFunction = (prev) => {
+  //   setWatchLaterVideos({ ...prev, watchLaterVideos });
+  // }
   const courseData = [
     {
       image: require("../assets/courses/aman.jpeg"),
-      category: "Development",
+      category: "Graphic Design",
       subjectImage: require("../assets/courses/p2.jpg"),
-      title: "Learn Figma: This is some dummy text demonstrating the title",
-      videoCount: 45,
-      studentCount: "2154+",
-      ratings: 4.9,
-      price: 120.0,
+      title: "Creative Adobe Illustrator Mastery",
+      videoCount: 15,
+      studentCount: "2800+",
+      ratings: 4.7,
+      price: 129.99,
+      liked:false,
+      watchLater:true
     },
     {
       image: require("../assets/courses/aman.jpeg"),
       category: "Marketing",
       subjectImage: require("../assets/courses/p2.jpg"),
-      title: "Master the Six Basic Rules of Investing by Robert Kiyosaki",
-      videoCount: 45,
-      studentCount: "2154+",
-      ratings: 4.9,
-      price: 120.0,
+      title: "Introduction to Digital Marketing Strategies",
+      videoCount: 28,
+      studentCount: "4200+",
+      ratings: 4.3,
+      price: 159.99,
+      liked:true,
+      watchLater:false
     },
     {
       image: require("../assets/courses/aman.jpeg"),
@@ -32,28 +47,35 @@ const VideoProvider = ({ children }) => {
       title: "Learn Figma: This is some dummy text demonstrating the title",
       videoCount: 45,
       studentCount: "2154+",
-      ratings: 4.9,
+      ratings: 4.1,
       price: 120.0,
+      liked:false,
+      watchLater:true
     },
     {
       image: require("../assets/courses/aman.jpeg"),
-      category: "Marketing",
+      category: "Development",
       subjectImage: require("../assets/courses/p2.jpg"),
-      title: "Learn Figma: This is some dummy text demonstrating the title",
-      videoCount: 45,
-      studentCount: "2154+",
-      ratings: 4.9,
-      price: 120.0,
+      title: "Mastering HTML and CSS for Beginners",
+      videoLink: "https://www.youtube.com/watch?v=your-html-css-course-video-link",
+      videoCount:30,
+      studentCount: "3500+",
+      ratings: 4.8,
+      price: 149.99,
+      liked:false,
+      watchLater:false
     },
     {
       image: require("../assets/courses/aman.jpeg"),
       category: "Photography",
       subjectImage: require("../assets/courses/p2.jpg"),
-      title: "Learn Figma: This is some dummy text demonstrating the title",
-      videoCount: 45,
-      studentCount: "2154+",
-      ratings: 4.9,
-      price: 120.0,
+      title: "Essentials of Photography Composition",
+      videoCount: 57,
+      studentCount: "3200+",
+      ratings: 4.8,
+      price: 139.99,
+      liked:true,
+      watchLater:true
     },
     {
       image: require("../assets/courses/aman.jpeg"),
@@ -64,9 +86,11 @@ const VideoProvider = ({ children }) => {
       studentCount: "2154+",
       ratings: 4.9,
       price: 120.0,
+      liked:false,
+      watchLater:false
     },
   ];
-  return <courses.Provider value={{ courseData }}>{children}</courses.Provider>;
+  return <courses.Provider value={{ courseData}}>{children}</courses.Provider>;
 };
 
 export default VideoProvider;

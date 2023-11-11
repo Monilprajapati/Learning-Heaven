@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useCourses } from '../../../context/VideoProvider';
 import "./ExploreCard.css"
 
-const ExploreCard = ({ image, category, subjectImage, title, videoCount, studentCount, ratings, price }) => {
+const ExploreCard = ({ img, category, subjectImage, title, videoCount, studentCount, ratings, price, liked, watchLater }) => {
+
+    const [islike, setLike] = useState(liked);
+    const [iswatchLater, setWatchLater] = useState(watchLater);
+
+    // const {likedVideos, setLikedVideos, watchLaterVideos, setWatchLaterVideos} = useCourses();
+    
     return (
         <div className="course-card">
-            <img src={image} alt="Course Image" />
+            <img src={img} alt="Course Image" />
             <div className="category">
                 <div className="subject">
                     <h3>{category}</h3>
@@ -27,10 +34,10 @@ const ExploreCard = ({ image, category, subjectImage, title, videoCount, student
                     <i className="fa-solid fa-star"></i>
                     <i className="fa-solid fa-star"></i>
                 </span>
-                <span>
-                    <b>$</b>
-                    {price}
-                </span>
+                <div className="icons">
+                    <i className='fa-solid fa-clock icon' style={islike ? { color: "blue" } : { color: "gray" }} onClick={() => setLike(!islike)}></i>
+                    <i className='fa-solid fa-heart icon' style={iswatchLater ? { color: "blue" } : { color: "gray" }} onClick={() => setWatchLater(!iswatchLater)}></i>
+                </div>
             </div>
         </div>
     )
