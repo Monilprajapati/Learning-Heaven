@@ -6,10 +6,13 @@ import { useCourses } from "../../../context/VideoProvider";
 const CourseList = () => {
   const { courseData } = useCourses();
 
+  // Get first 6 courses
+  const limitedCourses = courseData.slice(0, 6);
+
   return (
     <div>
-      <div class="course-contents">
-        {courseData.map((course, index) => (
+      <div className="course-contents">
+        {limitedCourses.map((course, index) => (
           <CourseCard
             key={index}
             image={course.image}

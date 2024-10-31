@@ -43,6 +43,7 @@ section.services{
 .service-box .service-desc p{
 	line-height: 1.4;
 	color: var(--dark-text-clr);
+	text-align: justify;
 }
 .service-box:nth-child(1) .service-icon{
 	background-color: #fef0ef;
