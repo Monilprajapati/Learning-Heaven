@@ -17,6 +17,7 @@ const VideoProvider = ({ children }) => {
   // }
   const courseData = [
     {
+      id: 1,
       image: require("../assets/courses/aman.jpeg"),
       category: "Graphic Design",
       subjectImage: require("../assets/courses/p2.jpg"),
@@ -29,6 +30,7 @@ const VideoProvider = ({ children }) => {
       watchLater:true
     },
     {
+      id: 2,
       image: require("../assets/courses/aman.jpeg"),
       category: "Marketing",
       subjectImage: require("../assets/courses/p2.jpg"),
@@ -41,6 +43,7 @@ const VideoProvider = ({ children }) => {
       watchLater:false
     },
     {
+      id: 3,
       image: require("../assets/courses/aman.jpeg"),
       category: "Graphic Design",
       subjectImage: require("../assets/courses/p2.jpg"),
@@ -53,6 +56,7 @@ const VideoProvider = ({ children }) => {
       watchLater:true
     },
     {
+      id: 4,
       image: require("../assets/courses/aman.jpeg"),
       category: "Development",
       subjectImage: require("../assets/courses/p2.jpg"),
@@ -66,6 +70,7 @@ const VideoProvider = ({ children }) => {
       watchLater:false
     },
     {
+      id: 5,
       image: require("../assets/courses/aman.jpeg"),
       category: "Photography",
       subjectImage: require("../assets/courses/p2.jpg"),
@@ -78,6 +83,7 @@ const VideoProvider = ({ children }) => {
       watchLater:true
     },
     {
+      id: 6,
       image: require("../assets/courses/aman.jpeg"),
       category: "Development",
       subjectImage: require("../assets/courses/p2.jpg"),

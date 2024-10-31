@@ -4,8 +4,12 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import CategoriesName from "./components/CategoriesNames/CategoriesName";
 import { useCourses } from "../../context/VideoProvider";
 import ExploreCard from "./ExploreCard/ExploreCard";
+import { useUser } from '../../context/UserProvider';
+
 const Explore = () => {
   const { courseData } = useCourses();
+  const { wishlist, watchLater, toggleWishlist, toggleWatchLater } = useUser();
+
   return (
     <>
       <div className="explore-container">
@@ -16,6 +20,7 @@ const Explore = () => {
           <div className="course_list">
             {courseData.map((course, index) => (
               <ExploreCard
+                id={course.id}
                 key={index}
                 img={course.image}
                 category={course.category}
@@ -25,8 +30,10 @@ const Explore = () => {
                 studentCount={course.studentCount}
                 ratings={course.ratings}
                 price={course.price}
-                liked={course.liked}
-                watchLater={course.watchLater}
+                liked={wishlist.includes(course.id)}
+                watchLater={watchLater.includes(course.id)}
+                onLikeClick={() => toggleWishlist(course.id)}
+                onWatchLaterClick={() => toggleWatchLater(course.id)}
               />
             ))}
           </div>

@@ -1,41 +1,45 @@
 import React from "react";
-import { useCourses } from "../../context/VideoProvider";
 import "./Likedvideos.css";
 import Sidebar from "../../components/Sidebar/Sidebar";
+import { useCourses } from "../../context/VideoProvider";
+import { useUser } from "../../context/UserProvider";
 import ExploreCard from "../Explore/ExploreCard/ExploreCard";
 
 const Likedvideos = () => {
-
   const { courseData } = useCourses();
-  return (
-    <div className="likedvideo-page">
+  
+  const { wishlist, watchLater, toggleWishlist, toggleWatchLater } = useUser();
 
-      <div className="likedvideos">
-        <Sidebar />
-        <div className="course_list" style={{ marginLeft: "50px", marginTop: "40px" }}>
-          {
-            courseData.map((course, index) => {
-              course.liked ? (
-                <ExploreCard
-                  key={index}
-                  img={course.image}
-                  category={course.category}
-                  subjectImage={course.subjectImage}
-                  title={course.title}
-                  videoCount={course.videoCount}
-                  studentCount={course.studentCount}
-                  ratings={course.ratings}
-                  price={course.price}
-                  liked={course.liked}
-                  watchLater={course.watchLater}
-                />
-              ) : (
-                <div>
-                  No liked video
-                </div>
-              )
-            })
-          }
+  const likedCourses = courseData.filter(course => wishlist.includes(course.id));
+
+  return (
+    <div className="explore-container">
+      <Sidebar />
+      <div className="explore-content">
+        <h2>Liked Videos</h2>
+        <div className="course_list">
+          {likedCourses.length > 0 ? (
+            likedCourses.map((course, index) => (
+              <ExploreCard
+                id={course.id}
+                key={index}
+                img={course.image}
+                category={course.category}
+                subjectImage={course.subjectImage}
+                title={course.title}
+                videoCount={course.videoCount}
+                studentCount={course.studentCount}
+                ratings={course.ratings}
+                price={course.price}
+                liked={wishlist.includes(course.id)}
+                watchLater={watchLater.includes(course.id)}
+                onLikeClick={() => toggleWishlist(course.id)}
+                onWatchLaterClick={() => toggleWatchLater(course.id)}
+              />
+            ))
+          ) : (
+            <div>No liked videos</div>
+          )}
         </div>
       </div>
     </div>

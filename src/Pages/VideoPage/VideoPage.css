@@ -1,0 +1,122 @@
+.video-page {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.video-player-section {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.video-player {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video-details {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.video-header h1 {
+    font-size: 1.8rem;
+    color: var(--dark-heading-clr);
+}
+
+.video-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.action-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-clr);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--primary-clr);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.action-btn:hover,
+.action-btn.active {
+    background: var(--primary-clr);
+    color: white;
+}
+
+.course-info {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--primary-light-clr);
+    border-radius: 8px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-item i {
+    color: var(--primary-clr);
+}
+
+.course-description,
+.instructor-info {
+    margin-bottom: 2rem;
+}
+
+.course-description h2,
+.instructor-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark-heading-clr);
+}
+
+.instructor-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.instructor-profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.instructor-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}

@@ -10,6 +10,14 @@ section.instructor {
     border-radius: 0px 100px 0px 100px;
 }
 
+.teacher-btn{
+    background-color: var(--primary-clr);
+    color: white;
+    border: none;
+    width: 150px;
+    margin-top: -2px;
+}
+
 .instructor-container h2 {
     font-size: 24px;
     color: var(--dark-heading-clr);
@@ -19,4 +27,5 @@ section.instructor {
     margin: 20px 0px 35px;
     line-height: 23px;
     color: var(--dark-text-clr);
+    text-align: justify;
 }

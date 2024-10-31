@@ -9,10 +9,25 @@ section.courses {
 	justify-content: space-between;
 }
 
-.section-header .courses-btn {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	position: absolute;
-	right: 0;
-	bottom: 40px;
-	padding: 10px 26px;
+.courseText {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.courseText p {
+	text-align: justify;
+	flex: 1;
+	width: 50%;
+}
+
+
+.courses-btn {
+	background-color: var(--primary-clr);
+	color: white;
+	border: none;
+	width: 100px;
+	margin-top: -2px;
 }

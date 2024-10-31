@@ -5,33 +5,45 @@
 
 .explore-container {
     display: flex;
-    height: 100vh;
-    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
 }
 
 .explore-content {
-    width: 100%;
-    padding-top: 2.2rem;
-    padding-left: 2rem;
+    flex: 1;
+    padding: 2.2rem 2rem;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .explore-content h2 {
-    margin-left: 13px;
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 30px;
+    font-size: 1.875rem;
+    color: var(--dark-heading-clr);
 }
 
-.course_list{
-    margin-top: 30px;
-    padding-bottom: 50px;
-    width: 100%;
+.course_list {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 20px;
-    column-gap: 20px;
-    align-items: center;
-    overflow-y: scroll;
+    gap: 1.25rem;
+    align-items: flex-start;
+    overflow-y: auto;
+    margin-top: 1.875rem;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.course_list::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.course_list {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }

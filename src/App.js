@@ -5,19 +5,45 @@ import All from "./components/All";
 import Explore from "./Pages/Explore/Explore";
 import Likedvideos from "./Pages/LikedVideos/Likedvideos";
 import Watchlater from "./Pages/Watchlater/Watchlater";
-import CourseList from "./components/Courses/CourseList/Courselist";
+import { UserProvider } from './context/UserProvider';
+import Login from './Pages/auth/Login';
+import Register from './Pages/auth/Register';
+import PrivateRoute from './components/PrivateRoute';
+import VideoPage from './Pages/VideoPage/VideoPage';
+import Message from './components/Message';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<All />}></Route>
-        <Route path="#categories" element = {<CourseList/>}></Route>
-        <Route path="/explore" element = {<Explore/>}></Route>
-        <Route path="/likedvideos" element = {<Likedvideos/>}></Route>
-        <Route path="/watchlater" element = {<Watchlater/>}></Route>
-      </Routes>
-    </Router>
+    <UserProvider>
+      <Router>
+        <Message />
+        <Routes>
+          <Route path="/" element={<All />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/explore" element={
+            <PrivateRoute>
+              <Explore />
+            </PrivateRoute>
+          } />
+          <Route path="/likedvideos" element={
+            <PrivateRoute>
+              <Likedvideos />
+            </PrivateRoute>
+          } />
+          <Route path="/watchlater" element={
+            <PrivateRoute>
+              <Watchlater />
+            </PrivateRoute>
+          } />
+          <Route path="/explore/video/:id" element={
+            <PrivateRoute>
+              <VideoPage />
+            </PrivateRoute>
+          } />
+        </Routes>
+      </Router>
+    </UserProvider>
   );
 }
 

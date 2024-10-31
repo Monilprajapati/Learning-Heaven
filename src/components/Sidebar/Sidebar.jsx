@@ -48,7 +48,7 @@ const Sidebar = () => {
           }`}
           onClick={navigateToWatchlater}
         >
-          <FaHeart className="heartIcon" />
+          <FaClock className="clockIcon" />
           <label htmlFor="" className="Label">
             Watch Later
           </label>
@@ -59,7 +59,7 @@ const Sidebar = () => {
           }`}
           onClick={navigateToLikedvideos}
         >
-          <FaClock className="clockIcon" />
+          <FaHeart className="heartIcon" />
           <label htmlFor="" className="Label">
             Liked Videos
           </label>

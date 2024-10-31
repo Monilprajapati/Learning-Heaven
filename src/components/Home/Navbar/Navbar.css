@@ -33,6 +33,7 @@
 
 .main-navbar .logo {
     text-decoration: none;
+    cursor: pointer;
 }
 
 .main-navbar .logo img {
@@ -91,4 +92,64 @@
     background-color: var(--primary-clr);
     color: var(--light-heading-clr);
     border: 1px solid var(--light-heading-clr);
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.user-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.explore-btn,
+.logout-btn,
+.auth-switch-btn {
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.explore-btn {
+    background-color: var(--primary-clr);
+    color: white;
+    border: none;
+}
+
+.logout-btn {
+    background-color: transparent;
+    color: var(--primary-clr);
+    border: 2px solid var(--primary-clr);
+}
+
+.auth-switch-btn {
+    background-color: var(--primary-clr);
+    color: white;
+    border: none;
+}
+
+.explore-btn:hover,
+.logout-btn:hover,
+.auth-switch-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-buttons {
+        gap: 0.5rem;
+    }
+
+    .explore-btn,
+    .logout-btn,
+    .auth-switch-btn {
+        padding: 6px 15px;
+        font-size: 0.9rem;
+    }
 }
