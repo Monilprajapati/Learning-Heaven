@@ -1,11 +1,12 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useCourses } from '../../context/VideoProvider';
 import { useUser } from '../../context/UserProvider';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import './VideoPage.css';
 
 const VideoPage = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const { courseData } = useCourses();
   const { wishlist, watchLater, toggleWishlist, toggleWatchLater } = useUser();
@@ -21,12 +22,19 @@ const VideoPage = () => {
       <div className="video-container">
         <Sidebar />
         <div className="video-content">
+          <button 
+            className="back-button"
+            onClick={() => navigate(-1)}
+          >
+            <i className="fa-solid fa-arrow-left"></i> Back
+          </button>
+          
           <div className="video-player-section">
             <div className="video-player">
               <iframe 
                 width="100%" 
                 height="100%" 
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ" // Replace with your video URL
+                src="https://www.youtube.com/embed/stmvSgdVciw" // Replace with your video URL
                 title="Course Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

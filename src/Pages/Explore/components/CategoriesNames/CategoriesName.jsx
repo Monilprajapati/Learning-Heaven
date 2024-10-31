@@ -1,34 +1,48 @@
 import React from "react";
-import "./CategoriesName.css"
+import "./CategoriesName.css";
 
-const CategoriesName = () => {
+const CategoriesName = ({ onCategorySelect }) => {
+  const [activeCategory, setActiveCategory] = React.useState("all");
 
   const categories = [
     {
-      id: 'all',
-      name: 'ALL'
+      id: "all",
+      name: "ALL",
     },
     {
-      id: 'development',
-      name: 'Development'
+      id: "Development",
+      name: "Development",
     },
     {
-      id: 'marketing',
-      name: 'Marketing'
+      id: "Graphic Design",
+      name: "Graphic Design",
     },
     {
-      id: 'designing',
-      name: 'Designing'
+      id: "Marketing",
+      name: "Marketing",
     },
     {
-      id: 'photography',
-      name: 'Photography'
-    }
-  ]
+      id: "Photography",
+      name: "Photography",
+    },
+  ];
+
+  const handleCategoryClick = (categoryId) => {
+    setActiveCategory(categoryId);
+    onCategorySelect(categoryId);
+  };
+
   return (
     <div className="categories_display">
       {categories.map((category) => (
-        <div id={category.id} className="category">
+        <div
+          key={category.id}
+          id={category.id}
+          className={`category ${
+            activeCategory === category.id ? "active" : ""
+          }`}
+          onClick={() => handleCategoryClick(category.id)}
+        >
           {category.name}
         </div>
       ))}
