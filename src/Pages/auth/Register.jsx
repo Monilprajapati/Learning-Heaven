@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useUser } from "../../context/UserProvider";
 import "./auth.css";
 import Navbar from "../../components/Home/Navbar/Navbar";
+import toast from 'react-hot-toast';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -34,10 +35,34 @@ const Register = () => {
     const newErrors = validateForm();
 
     if (Object.keys(newErrors).length === 0) {
-      register(formData);
-      navigate("/explore");
+      const success = register(formData);
+      if (success) {
+        toast.success('Registration successful! Welcome aboard! 🎉', {
+          duration: 3000,
+          style: {
+            background: '#4CAF50',
+            color: '#fff',
+          },
+        });
+        navigate("/explore");
+      } else {
+        toast.error('This email is already registered. Please try another one.', {
+          duration: 4000,
+          style: {
+            background: 'white',
+            color: 'black',
+          },
+        });
+      }
     } else {
       setErrors(newErrors);
+      toast.error('Please fix the errors in the form.', {
+        duration: 3000,
+        style: {
+          background: 'white',
+          color: 'black',
+        },
+      });
     }
   };
 

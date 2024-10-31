@@ -11,11 +11,26 @@ import Register from './Pages/auth/Register';
 import PrivateRoute from './components/PrivateRoute';
 import VideoPage from './Pages/VideoPage/VideoPage';
 import Message from './components/Message';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
     <UserProvider>
       <Router>
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          gutter={8}
+          toastOptions={{
+            // Default options for all toasts
+            duration: 3000,
+            style: {
+              borderRadius: '8px',
+              padding: '16px',
+              maxWidth: '400px',
+            },
+          }}
+        />
         <Message />
         <Routes>
           <Route path="/" element={<All />} />

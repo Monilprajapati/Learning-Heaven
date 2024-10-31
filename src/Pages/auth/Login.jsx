@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useUser } from "../../context/UserProvider";
 import "./auth.css";
 import Navbar from "../../components/Home/Navbar/Navbar";
+import toast from 'react-hot-toast';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -28,10 +29,34 @@ const Login = () => {
     const newErrors = validateForm();
 
     if (Object.keys(newErrors).length === 0) {
-      login(formData);
-      navigate("/explore");
+      const success = login(formData);
+      if (success) {
+        toast.success('Welcome back! 👋', {
+          duration: 3000,
+          style: {
+            background: '#4CAF50',
+            color: '#fff',
+          },
+        });
+        navigate("/explore");
+      } else {
+        toast.error('Invalid email or password. Please try again.', {
+          duration: 4000,
+          style: {
+            background: 'white',
+            color: 'black',
+          },
+        });
+      }
     } else {
       setErrors(newErrors);
+      toast.error('Please fix the errors in the form.', {
+        duration: 3000,
+        style: {
+          background: 'white',
+          color: 'black',
+        },
+      });
     }
   };
 
